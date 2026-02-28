@@ -1,7 +1,7 @@
 ---
-
-## Date: 2025-11-06 — 2026-02-28
-Tags: #Random #Engineering #Principles #Career
+Date: 2025-11-06 — 2026-02-28
+Tags: "#Random #Engineering #Principles #Career"
+---
 
 # Random Knowledge
 
