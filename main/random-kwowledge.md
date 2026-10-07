@@ -1,5 +1,5 @@
 ---
-Date: 2025-11-06 — 2026-02-28
+Date: 2025-11-06 - 2026-02-28
 Tags: "#Random #Engineering #Principles #Career"
 ---
 
@@ -33,30 +33,30 @@ A curated collection of engineering principles, mental models, career insights, 
 
 Ten core concepts every developer should internalize:
 
-1. **Composition over Inheritance** — favor combining small, focused pieces over deep class hierarchies.
-2. **YAGNI (You Aren't Gonna Need It)** — don't build what you don't need yet.
-3. **Principle of Least Privilege** — don't expose data unnecessarily; don't give functions access to everything.
-4. **Make Illegal States Unrepresentable** — design types and data structures so invalid states can't exist.
-5. **Code for Humans** — readability and clarity over cleverness.
-6. **Embrace Immutability** — copy data or create new instances instead of mutating in place.
-7. **Think in Pipelines** — `Input -> Transform -> Output -> Transform -> Output`
-8. **Understand the Cost of Abstraction** — every layer adds complexity; justify it.
-9. **Accept That Refactoring Is Not Optional** — code rots; refactoring is maintenance, not rework.
-10. **Your Code Will Change — Build for Now** — stop future-proofing; embrace simplicity.
+1. **Composition over Inheritance** - favor combining small, focused pieces over deep class hierarchies.
+2. **YAGNI (You Aren't Gonna Need It)** - don't build what you don't need yet.
+3. **Principle of Least Privilege** - don't expose data unnecessarily; don't give functions access to everything.
+4. **Make Illegal States Unrepresentable** - design types and data structures so invalid states can't exist.
+5. **Code for Humans** - readability and clarity over cleverness.
+6. **Embrace Immutability** - copy data or create new instances instead of mutating in place.
+7. **Think in Pipelines** - `Input -> Transform -> Output -> Transform -> Output`
+8. **Understand the Cost of Abstraction** - every layer adds complexity; justify it.
+9. **Accept That Refactoring Is Not Optional** - code rots; refactoring is maintenance, not rework.
+10. **Your Code Will Change - Build for Now** - stop future-proofing; embrace simplicity.
 
 Additional principles:
 
-- **DSA** — keep it simple, predictable, and stable.
-- **Configs & Secrets** — write functional code, define configuration categories, choose where secrets live, and create example configs. Small steps save hours of refactoring later.
-- **Essential vs. Derived State** — distinguish between source-of-truth state and state that can be computed from it.
-- **State vs. Events** — understand when to model something as persistent state versus a transient event.
+- **DSA** - keep it simple, predictable, and stable.
+- **Configs & Secrets** - write functional code, define configuration categories, choose where secrets live, and create example configs. Small steps save hours of refactoring later.
+- **Essential vs. Derived State** - distinguish between source-of-truth state and state that can be computed from it.
+- **State vs. Events** - understand when to model something as persistent state versus a transient event.
 - Write tests, not theories. Simplicity is king.
 
 ---
 
 ## Mental Models & Systems Thinking
 
-> *"All programs are just data transformations."* — Mike Acton
+> *"All programs are just data transformations."* - Mike Acton
 
 **The Universal System Model:**
 
@@ -78,7 +78,7 @@ Everything is a state machine. Your code is a liability. Think in systems.
 - Data goes **DOWN** via props
 - Events go **UP** via functions
 - Track the state; make it small and isolated
-- Don't modify data — copy or create new (immutability)
+- Don't modify data - copy or create new (immutability)
 
 **Pointers & Variables:**
 
@@ -93,7 +93,7 @@ Everything is a state machine. Your code is a liability. Think in systems.
 
 **Core Concepts:** Components, State, Props, Lifecycle
 
-The frontend engineering lifecycle spans three phases — **Build**, **Deployment**, and **Runtime** — each with distinct concerns:
+The frontend engineering lifecycle spans three phases - **Build**, **Deployment**, and **Runtime** - each with distinct concerns:
 
 Frontend Engineering Lifecycle
 
@@ -101,11 +101,11 @@ Frontend Engineering Lifecycle
 
 **JavaScript Event Loop:**
 
-- **Heap** — memory allocation
-- **Call Stack** — execution context
-- **libuv** — async I/O (Node.js)
-- **Task Queue** — macrotasks (setTimeout, I/O)
-- **Microtask Queue** — promises, queueMicrotask
+- **Heap** - memory allocation
+- **Call Stack** - execution context
+- **libuv** - async I/O (Node.js)
+- **Task Queue** - macrotasks (setTimeout, I/O)
+- **Microtask Queue** - promises, queueMicrotask
 
 ---
 
@@ -123,25 +123,25 @@ Frontend Engineering Lifecycle
 | **API Gateway**   | Manages, routes, and secures API traffic     |
 
 
-**GraphQL / DataLoader** — batch and cache database requests to avoid N+1 query problems.
+**GraphQL / DataLoader** - batch and cache database requests to avoid N+1 query problems.
 
 ---
 
 ## Software Architecture & Decision Records
 
-Recording architectural decisions is a critical engineering habit. The format doesn't matter — the habit of recording does.
+Recording architectural decisions is a critical engineering habit. The format doesn't matter - the habit of recording does.
 
-Recording Decisions — ADR Example
+Recording Decisions - ADR Example
 
 *Figure: An Architecture Decision Record (ADR) captures what you chose, why, and what you considered. From "Learn Out Loud: From Prototype to Production" with Alan Knox.*
 
 ADR Workflow in Cursor
 
-*Figure: Using AI to generate and manage ADRs directly in the IDE — surfacing decisions before deployment.*
+*Figure: Using AI to generate and manage ADRs directly in the IDE - surfacing decisions before deployment.*
 
 ### The Full Methodology
 
-The same three steps work at every stage of the software lifecycle — from Idea through Design, Architecture, Plan, Build, Deploy, Operate, and Evolve:
+The same three steps work at every stage of the software lifecycle - from Idea through Design, Architecture, Plan, Build, Deploy, Operate, and Evolve:
 
 The Full Methodology
 
@@ -151,15 +151,15 @@ The Full Methodology
 
 AI-Assisted Decision Making
 
-*Figure: Actionable next steps — ask your AI to audit your code, pick the scariest answer and explore it, record what you decide, and repeat from the start.*
+*Figure: Actionable next steps - ask your AI to audit your code, pick the scariest answer and explore it, record what you decide, and repeat from the start.*
 
 ### ADR Workflow (Practical Example)
 
-**Step 1 — Surface decisions before deploying:**
+**Step 1 - Surface decisions before deploying:**
 
 > *"I'm ready to deploy this project in production. Study my project and suggest decisions that we should make before deploying. Create a list of decisions in `/docs/decisions` and for each decision add an ADR file so that we can track the decision-making later."*
 
-**Step 2 — Evaluate each decision:**
+**Step 2 - Evaluate each decision:**
 
 > *"Check the updated ADRs. For each decision, recommend the best and simplest option, then suggest the 2nd best. Explain why you came up with the decision, list strengths, weaknesses, and tradeoffs. Finally, tell me your assumptions."*
 
@@ -179,7 +179,7 @@ Cursor's Composer agent receives a query and uses a set of tools to accomplish t
 
 How Cursor Works
 
-*Figure: The Cursor agent flow — User query is processed by the Composer agent, which selects from tools: Read File, Edit File, Codebase Search, Collect Lints, and Terminal Command.*
+*Figure: The Cursor agent flow - User query is processed by the Composer agent, which selects from tools: Read File, Edit File, Codebase Search, Collect Lints, and Terminal Command.*
 
 ### Workflow Modes
 
@@ -197,9 +197,9 @@ Equivalent in Cursor: **Ask -> Plan -> Agent**
 
 ### You Are the Driver When Using AI
 
-1. **Surface decisions** — what choices need to be made?
-2. **Understand tradeoffs** — what are the pros and cons?
-3. **Make choices** — decide consciously and record reasoning.
+1. **Surface decisions** - what choices need to be made?
+2. **Understand tradeoffs** - what are the pros and cons?
+3. **Make choices** - decide consciously and record reasoning.
 
 ### Recommended AI Model Usage
 
@@ -229,10 +229,10 @@ Equivalent in Cursor: **Ask -> Plan -> Agent**
 
 Frame your work in terms of business outcomes:
 
-- **Revenue** — how does it drive income?
-- **Risk** — what risk does it mitigate?
-- **Cost** — what cost does it reduce?
-- **TTM (Time to Market)** — how does it accelerate delivery?
+- **Revenue** - how does it drive income?
+- **Risk** - what risk does it mitigate?
+- **Cost** - what cost does it reduce?
+- **TTM (Time to Market)** - how does it accelerate delivery?
 
 **Impact Formula:**
 
@@ -263,13 +263,13 @@ Frame your work in terms of business outcomes:
 
 ### Leadership Without a Title
 
-- **Skill = Execution** — deliver results consistently
-- **Authority = Trust** — earned through reliability
+- **Skill = Execution** - deliver results consistently
+- **Authority = Trust** - earned through reliability
 - Write decision docs
 - Record tech talks
 - Lead without a role
 
-**Meetings:** Name them *"Recap and Next Steps"* — always end with clarity.
+**Meetings:** Name them *"Recap and Next Steps"* - always end with clarity.
 
 **Architecture:** Components -> Modules (think in composable units)
 
@@ -282,10 +282,10 @@ Frame your work in terms of business outcomes:
 
 | Step             | Description                       |
 | ---------------- | --------------------------------- |
-| **B** — Big Idea | Lead with the core insight        |
-| **P** — Problem  | Define the pain point             |
-| **A** — Amplify  | Show the consequences of inaction |
-| **S** — Solution | Present your approach             |
+| **B** - Big Idea | Lead with the core insight        |
+| **P** - Problem  | Define the pain point             |
+| **A** - Amplify  | Show the consequences of inaction |
+| **S** - Solution | Present your approach             |
 
 
 ### Narrative Structure
@@ -294,9 +294,9 @@ Frame your work in terms of business outcomes:
 
 ### How to Whiteboard
 
-- **What** — define the concept
-- **Why** — explain the motivation
-- **How** — walk through the mechanics
+- **What** - define the concept
+- **Why** - explain the motivation
+- **How** - walk through the mechanics
 
 **Goal:** Understand by breaking down. Answer any questions.
 
@@ -314,14 +314,14 @@ Break down the problem into its most basic components. Organize main ideas in a 
 
 ### The Feynman Technique (First Principles)
 
-1. **Choose a Concept & Study** — select a topic, research it, and write down everything you know on a blank sheet of paper.
-2. **Teach It Simply** — explain the topic as if teaching a child, using simple, non-technical language.
-3. **Identify Gaps & Review** — note areas where you struggled, then return to source materials to fill those gaps.
-4. **Simplify & Use Analogies** — create a final, concise narrative or analogy that makes the concept intuitive.
+1. **Choose a Concept & Study** - select a topic, research it, and write down everything you know on a blank sheet of paper.
+2. **Teach It Simply** - explain the topic as if teaching a child, using simple, non-technical language.
+3. **Identify Gaps & Review** - note areas where you struggled, then return to source materials to fill those gaps.
+4. **Simplify & Use Analogies** - create a final, concise narrative or analogy that makes the concept intuitive.
 
 ### Train of Thought & Belief Systems
 
-Your mental frameworks shape how you approach problems. Be intentional about the beliefs and thought patterns you adopt — they become your default problem-solving toolkit.
+Your mental frameworks shape how you approach problems. Be intentional about the beliefs and thought patterns you adopt - they become your default problem-solving toolkit.
 
 ---
 
@@ -330,8 +330,8 @@ Your mental frameworks shape how you approach problems. Be intentional about the
 ### Four Rules for Effective Landing Pages
 
 1. Users must know what you do within **3 seconds**
-2. Avoid AI slop — no generic purple gradients, abstract glows, or stock imagery
-3. **Show, don't tell** — demonstrate value, skip the fluff
+2. Avoid AI slop - no generic purple gradients, abstract glows, or stock imagery
+3. **Show, don't tell** - demonstrate value, skip the fluff
 4. Clear hierarchy and CTAs > aesthetics
 
 ### Color Palette
@@ -353,8 +353,8 @@ Color Palette
 
 ### Web Standards Bodies
 
-- **HTTP Working Group (HTTPWG)** — develops and maintains the HTTP protocol specifications
-- **Internet Engineering Task Force (IETF)** — develops and promotes internet standards
+- **HTTP Working Group (HTTPWG)** - develops and maintains the HTTP protocol specifications
+- **Internet Engineering Task Force (IETF)** - develops and promotes internet standards
 
 ---
 
@@ -382,10 +382,10 @@ git commit --allow-empty -m "chore: trigger CI/CD workflow"
 ## Quotes
 
 > *"Don't compare yourself to others. Compare yourself to who you were yesterday."*
-> — Jordan Peterson
+> \- Jordan Peterson
 
 > *"I don't wish for an easy life. I wish for the strength to handle a difficult life."*
-> — Bruce Lee
+> \- Bruce Lee
 
 ---
 
@@ -412,9 +412,9 @@ git commit --allow-empty -m "chore: trigger CI/CD workflow"
 
 ### Key Figures
 
-- **Matt Huang** — technology and venture capital
-- **Mike Acton** — data-oriented design, "All programs are just data transformations"
-- **Alan Knox** — "Learn Out Loud: From Prototype to Production"
+- **Matt Huang** - technology and venture capital
+- **Mike Acton** - data-oriented design, "All programs are just data transformations"
+- **Alan Knox** - "Learn Out Loud: From Prototype to Production"
 
 ---
 
