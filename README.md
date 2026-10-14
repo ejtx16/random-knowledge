@@ -20,3 +20,4 @@ images/         → Supporting diagrams and screenshots
 - Communication and storytelling
 - Learning techniques (Feynman method)
 - Design and UI/UX guidelines
+- AI
