@@ -5,7 +5,7 @@ A personal collection of engineering principles, mental models, career insights,
 ## Structure
 
 ```
-main/           → Core notes (Random Knowledge.md)
+main/           → Core notes (random-knowledge.md, ai-knowledge.md)
 images/         → Supporting diagrams and screenshots
 ```
 
